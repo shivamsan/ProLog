@@ -1,0 +1,15 @@
+man(anand).
+man(arun).
+women(anuradha).
+woman(jayashree).
+
+parent(anand,parth).
+parent(anuradha,parth).
+parent(arun,anuradha).
+parent(jayshree,anuradha).
+
+father(F,C):-man(F),parent(F,C).
+mother(M,C):-woman(M),parent(M,C).
+
+?- father(X,parth).
+
